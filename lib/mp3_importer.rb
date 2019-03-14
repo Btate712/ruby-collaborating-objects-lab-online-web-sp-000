@@ -14,6 +14,5 @@ class MP3Importer
       @files << file_path.split("/").last
     end
     @files
-    binding.pry
   end
 end
