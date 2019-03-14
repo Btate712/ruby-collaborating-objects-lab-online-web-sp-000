@@ -13,5 +13,6 @@ class MP3Importer
     long_file_paths.each do |file_path|
       @files << file_path.split("/").last
     end
+    @files
   end
 end
