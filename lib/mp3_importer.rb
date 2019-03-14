@@ -9,11 +9,9 @@ class MP3Importer
   end
 
   def files
-    # @path is a string that indicates the directory location, not an array,
-    # so the code below doesn't work.  Need to figure out how to access the files
-    # in the directory.
-    @files = Dir["#{@path}/*.mp3"]
-    binding.pry
-
+    long_file_paths = Dir["#{@path}/*.mp3"]
+    long_file_paths.each do |file_path|
+      @files << file_path.split("/").last
+    end
   end
 end
