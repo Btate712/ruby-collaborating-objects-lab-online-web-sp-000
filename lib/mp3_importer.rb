@@ -11,6 +11,7 @@ class MP3Importer
     # so the code below doesn't work.  Need to figure out how to access the files
     # in the directory.
     @files = Dir["#{@path}/*.mp3"]
+    binding.pry
 
   end
 end
